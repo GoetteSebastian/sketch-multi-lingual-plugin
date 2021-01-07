@@ -1,0 +1,49 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sketch-hq/SketchAPI/develop/docs/sketch-plugin-manifest-schema.json",
+  "icon": "icon.png",
+  "suppliesData": false,
+  "disableCocoaScriptPreprocessor": true,
+  "identifier": "com.goette.sketch.plugin.multilingual-document",
+  "name": "Multi lingual Plugin",
+  "author": "Sebastian Götte",
+  "version": "1.0",
+  "compatibleVersion": "70.3",
+  "homepage": "https://github.com/GoetteSebastian/sketch-multi-lingual-plugin",
+  "commands": [
+    {
+      "script": "./main.js",
+      "identifier": "plugin.multilingual-layer-selection-listener",
+      "handlers": {
+        "actions": {
+          "SelectionChanged.finish": "onSelectionChanged"
+        }
+      }
+    },
+    {
+      "name": "Set Document as multi lingual",
+      "identifier": "plugin.multilingual-setdocument-identifier",
+      "script": "./main.js",
+      "handler": "setMultiLingual"
+    },
+    {
+      "name": "Choose Language...",
+      "identifier": "plugin.multilingual-setlanguage-identifier",
+      "script": "./main.js",
+      "handler": "setLanguage"
+    },
+    {
+      "name": "Load Text Fragments...",
+      "identifier": "plugin.multilingual-loadtext-identifier",
+      "script": "./main.js",
+      "handler": "loadTextFragments"
+    }
+  ],
+  "menu": {
+    "title": "Multi lingual",
+    "items": [
+      "plugin.multilingual-setdocument-identifier",
+      "plugin.multilingual-setlanguage-identifier",
+      "plugin.multilingual-loadtext-identifier"
+    ]
+  }
+}
