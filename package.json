@@ -28,5 +28,9 @@
     "@skpm/dialog": "^0.4.1",
     "@skpm/fs": "^0.2.6",
     "csv-parse": "^4.14.2"
+  },
+  "repository" : {
+    "type": "git",
+    "url": "git+https://github.com/GoetteSebastian/sketch-multi-lingual-plugin.git"
   }
 }
