@@ -7,20 +7,5 @@
     <item>
       <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v1.0.0/plugin.sketchplugin.zip" sparkle:version="1.0.0"/>
     </item>
-    <item>
-      <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v5.0.0/plugin.sketchplugin.zip" sparkle:version="5.0.0"/>
-    </item>
-    <item>
-      <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v4.0.0/plugin.sketchplugin.zip" sparkle:version="4.0.0"/>
-    </item>
-    <item>
-      <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v3.0.0/plugin.sketchplugin.zip" sparkle:version="3.0.0"/>
-    </item>
-    <item>
-      <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v2.0.0/plugin.sketchplugin.zip" sparkle:version="2.0.0"/>
-    </item>
-    <item>
-      <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v1.0.0/plugin.sketchplugin.zip" sparkle:version="1.0.0"/>
-    </item>
   </channel>
 </rss>
