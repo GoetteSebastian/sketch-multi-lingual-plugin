@@ -137,7 +137,7 @@ function setLanguageTexts(document, originalText) {
   var textFragments = sketch.Settings.documentSettingForKey(document, "textFragments");
   var currentLanguage = sketch.Settings.documentSettingForKey(document, "currentLanguage");
   var result = originalText.replace(/{(.*?)}/gm, (value) => {
-    var string = "";
+    var string = value;
     textFragments.forEach((item, index) => {
       if(item.id == value.substring(1, value.length -1)) {
         string = item[currentLanguage];
