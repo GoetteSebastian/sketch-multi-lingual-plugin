@@ -5,9 +5,6 @@
       <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v1.0.1/plugin.sketchplugin.zip" sparkle:version="1.0.1"/>
     </item>
     <item>
-      <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v1.0.1/plugin.sketchplugin.zip" sparkle:version="1.0.1"/>
-    </item>
-    <item>
       <enclosure url="https://github.com/GoetteSebastian/sketch-multi-lingual-plugin/releases/download/v1.0.0/plugin.sketchplugin.zip" sparkle:version="1.0.0"/>
     </item>
   </channel>
