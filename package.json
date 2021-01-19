@@ -1,7 +1,7 @@
 {
   "name": "sketch-multi-lingual-plugin",
   "description": "A plugin that allowes the user to switch between languages to visualize how the webpage or app will look in the given language. The text fragments can be loaded as csv file.",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "engines": {
     "sketch": ">=49.0"
   },
