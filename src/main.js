@@ -80,7 +80,8 @@ export function loadTextFragments(context) {
   var csvData = parse(file, {
     delimiter: ";",
     columns: true,
-    skip_lines_with_error: true
+    skip_lines_with_error: true,
+    bom: true
   }, (err, data) => {
     console.log(err);
   });
