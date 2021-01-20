@@ -45,4 +45,7 @@ In a single text layer or symbol instance override field multiple ids can be ent
 
 Have fun using the plugin!
 
+
+This Plugin uses the [CSV Parse module](https://www.npmjs.com/package/csv-parse)
+
 _This plugin was created using `skpm`. For a detailed explanation on how things work, checkout the [skpm Readme](https://github.com/skpm/skpm/blob/master/README.md)._
