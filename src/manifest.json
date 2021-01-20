@@ -6,7 +6,7 @@
   "identifier": "com.goette.sketch.plugin.multilingual-document",
   "name": "Multi lingual Plugin",
   "author": "Sebastian Götte",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "compatibleVersion": "70.3",
   "homepage": "https://github.com/GoetteSebastian/sketch-multi-lingual-plugin",
   "commands": [
