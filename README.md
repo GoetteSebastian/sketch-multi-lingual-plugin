@@ -8,7 +8,7 @@
 
 ## Introduction
 - The Plugin allowes the user to create a multi lingual sketch document. 
-- The text informations in the different languages can be loaded as .csv file after at any given time. 
+- The text informations in the different languages can be loaded as .csv file at any given time. 
 
 ## Usage
 ### Set document as multi lingual
