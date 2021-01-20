@@ -25,7 +25,9 @@ next.text.element;Goodbye;Auf wiedersehen;Adiós
 ```
 The .csv file should be formated as `utf-8`. The first collumnt must have the name `id`, the following collumns should be named after the languag it contains. 
 The easiest way to get the correct file is to export an excel spreadsheet as csv. The Spreadsheet should be structured as follows: 
-|id|English|German|Spanish|
+
+| id | English | German | Spanish |
+| :--- | :--- | :--- | :---|
 |id.of.text.element|Hello world|Hallo Welt|Hola Mundo|
 |next.text.element|Goodbye|Auf wiedersehen|Adiós|
 
