@@ -1,4 +1,4 @@
-# Plugin
+# Sketch Multi lingual Plugin
 
 ## Installation
 
