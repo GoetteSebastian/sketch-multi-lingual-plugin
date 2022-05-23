@@ -31,7 +31,8 @@ The easiest way to get the correct file is to export an excel spreadsheet as csv
 |id.of.text.element|Hello world|Hallo Welt|Hola Mundo|
 |next.text.element|Goodbye|Auf wiedersehen|Adiós|
 
-The .csv file and be loaded manually at any time. Go to the `Plugin` menu and under `Multi lingual`click `Load Text Fragments...`. Select the .csv file in the dialog and click `Load`. 
+The .csv file can be loaded manually at any time. Go to the `Plugin` menu and under `Multi lingual`click `Load Text Fragments...`. Select the .csv file in the dialog and click `Load`. 
+After selecting a .csv file you have to enter the delimeter character. If you are not sure what to enter leave the already entered `;` character. If it doesn't work you can open the .csv file with a text editor to find out, what character is written between the content of two cells. 
 
 ### Setting the current language
 When a .csv file is loaded, the language titles from the first row are stored as availiable languages. You can select the current language my going to the `Plugin` menu and under `Multi lingual`by clicking on `Choose Language...`. 
