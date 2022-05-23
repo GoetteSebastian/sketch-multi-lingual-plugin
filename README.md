@@ -32,6 +32,7 @@ The easiest way to get the correct file is to export an excel spreadsheet as csv
 |next.text.element|Goodbye|Auf wiedersehen|Adiós|
 
 The .csv file can be loaded manually at any time. Go to the `Plugin` menu and under `Multi lingual`click `Load Text Fragments...`. Select the .csv file in the dialog and click `Load`. 
+
 After selecting a .csv file you have to enter the delimeter character. If you are not sure what to enter leave the already entered `;` character. If it doesn't work you can open the .csv file with a text editor to find out, what character is written between the content of two cells. 
 
 ### Setting the current language
