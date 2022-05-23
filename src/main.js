@@ -34,7 +34,7 @@ export function setLanguage(context) {
 export function setMultiLingual(context) {
   var document = sketch.Document.getSelectedDocument();
   if(sketch.Settings.documentSettingForKey(document, "isMultiLingual") != true) {
-    sketch.Settings.setDocumentSettingForKey(document, "isMultiLingual", true);
+    sketch.Settings.setDocumentSettingForKey(document, 'delimeter', ";")
     var allTextLayers = sketch.find("Text", document);
     allTextLayers.forEach((layer, index) => {
       if(!sketch.Settings.layerSettingForKey(layer, 'originalText')) {
@@ -49,11 +49,11 @@ export function setMultiLingual(context) {
         }
       });
     });
-    loadTextFragments();
-    sketch.UI.message("Successfully set Document as multi lingual. ");
+    loadTextFragments()
+    sketch.UI.message("Successfully set Document as multi lingual. ")
   }
   else {
-    sketch.UI.message("Current Document is already set as multi lingual. ");
+    sketch.UI.message("Current Document is already set as multi lingual. ")
   }
 }
 
@@ -74,25 +74,42 @@ export function loadTextFragments(context) {
       filters: [{name: "CSV", extensions: ["csv"]}],
       properties: ["openFile"]
     }
-  );
-  if(csvFile.length == 0) return false;
-  var file = fs.readFileSync(csvFile[0], {encoding: "utf8"});
-  var csvData = parse(file, {
-    delimiter: ";",
-    columns: true,
-    skip_lines_with_error: true,
-    bom: true
-  }, (err, data) => {
-    console.log(err);
-  });
-  sketch.Settings.setDocumentSettingForKey(document, "textFragments", csvData);
-  var languages = Object.keys(csvData[0]);
-  languages.splice(0,1);
-  sketch.Settings.setDocumentSettingForKey(document, "languages", languages);
-  if(languages.indexOf(sketch.Settings.documentSettingForKey(document, "currentLanguage")) == -1) {
-    sketch.Settings.setDocumentSettingForKey(document, "currentLanguage", languages[0]);
-  }
-  renderLanguage(document);
+  )
+  if(csvFile.length == 0) return false
+  var file = fs.readFileSync(csvFile[0], {encoding: "utf8"})
+  sketch.UI.getInputFromUser(
+    "Set Delimeter of your csv File. ",
+    {
+      type: sketch.UI.INPUT_TYPE.string,
+      initialValue: sketch.Settings.documentSettingForKey(document, "delimeter"),
+      numberOfLines: 1,
+      description: "Enter exactly 1 character which is used as delimeter in your csv file. "
+    },
+    (err, value) => {
+      if (err) {
+      return
+    }
+    else {
+      sketch.Settings.setDocumentSettingForKey(document, 'delimeter', value)    
+      var csvData = parse(file, {
+        delimiter: sketch.Settings.documentSettingForKey(document, "delimeter"),
+        columns: true,
+        skip_lines_with_error: true,
+        bom: true
+      }, (err, data) => {
+        console.log(err)
+      })
+      sketch.Settings.setDocumentSettingForKey(document, "textFragments", csvData)
+      var languages = Object.keys(csvData[0])
+      languages.splice(0,1)
+      sketch.Settings.setDocumentSettingForKey(document, "languages", languages)
+      if(languages.indexOf(sketch.Settings.documentSettingForKey(document, "currentLanguage")) == -1) {
+        sketch.Settings.setDocumentSettingForKey(document, "currentLanguage", languages[0])
+      }
+      sketch.Settings.setDocumentSettingForKey(document, "isMultiLingual", true)
+      renderLanguage(document)
+    }
+  })
 }
 
 //Function is called when the selection is changed. Newly selected elements will show the original text with the key words {key}, newly deselected elements will show the given text fragments in the current language.
